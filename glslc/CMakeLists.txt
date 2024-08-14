@@ -31,6 +31,7 @@ add_library(glslc STATIC
 
 shaderc_default_compile_options(glslc)
 target_include_directories(glslc PUBLIC ${glslang_SOURCE_DIR})
+target_include_directories(glslc PUBLIC src)
 
 if (SHADERC_ENABLE_WGSL_OUTPUT)
   if (IS_DIRECTORY "${tint_SOURCE_DIR}/include")
